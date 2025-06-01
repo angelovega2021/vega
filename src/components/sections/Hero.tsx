@@ -127,10 +127,10 @@ export const Hero = () => {
         <HeroContent>
           <div>
             <Title role="heading" aria-level={2}>
-              Hi, I'm [Your Name]
+              Hi, I'm [Melchor Angelo Vega]
             </Title>
             <Subtitle role="heading" aria-level={3}>
-              Full Stack Developer
+              ReactJS Typescript | Ruby on Rails
             </Subtitle>
             <Description role="paragraph">
               I create elegant solutions to complex problems, specializing in modern web development
