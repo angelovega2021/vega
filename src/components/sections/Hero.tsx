@@ -2,9 +2,10 @@ import styled from '@emotion/styled';
 import { theme } from '../../styles/theme';
 import { keyframes } from '@emotion/react';
 import { lazy, Suspense } from 'react';
+import profile from '../../assets/profile.png'
 const FaGithub = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaGithub })));
 const FaLinkedin = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaLinkedin })));
-const FaEnvelope = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaEnvelope })));
+const FaViber = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaViber })));
 
 const HeroSection = styled.section`
   min-height: calc(100vh - 4.5rem);
@@ -33,13 +34,15 @@ const HeroSection = styled.section`
 const HeroContent = styled.div`
   position: relative;
   z-index: 1;
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
   background: ${theme.colors.glass.background};
   backdrop-filter: blur(8px);
   border-radius: 20px;
   padding: ${theme.spacing.lg};
   border: none;
+  display: flex;
+  justify-content: space-between;
 
   @media (min-width: ${theme.breakpoints.md}) {
     padding: ${theme.spacing.xl};
@@ -59,7 +62,7 @@ const fadeUpKeyframes = keyframes`
 
 const Title = styled.h1`
   animation: ${fadeUpKeyframes} 0.5s ease-out forwards;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(40px, 6vw, 48px);
   margin-bottom: ${theme.spacing.md};
   color: ${theme.colors.light};
   line-height: 1.1;
@@ -70,7 +73,7 @@ const Title = styled.h1`
 const Subtitle = styled.h2`
   animation: ${fadeUpKeyframes} 0.5s ease-out 0.2s forwards;
   opacity: 0;
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-size: clamp(12px, 3vw, 24px)
   margin-bottom: ${theme.spacing.lg};
   opacity: 0.9;
   font-weight: 500;
@@ -79,7 +82,7 @@ const Subtitle = styled.h2`
 const Description = styled.p`
   animation: ${fadeUpKeyframes} 0.5s ease-out 0.4s forwards;
   opacity: 0;
-  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  font-size: clamp(12px, 1.2vw, 16px)
   max-width: 600px;
   margin-bottom: ${theme.spacing.xl};
   opacity: 0.8;
@@ -127,18 +130,17 @@ export const Hero = () => {
         <HeroContent>
           <div>
             <Title role="heading" aria-level={2}>
-              Hi, I'm [Melchor Angelo Vega]
+              I'm Melchor Angelo Vega
             </Title>
             <Subtitle role="heading" aria-level={3}>
               ReactJS Typescript | Ruby on Rails
             </Subtitle>
             <Description role="paragraph">
-              I create elegant solutions to complex problems, specializing in modern web development
-              with a focus on user experience and clean code.
+              Building web application using reactJS.
             </Description>
             <SocialLinks role="list" aria-label="Social media links">
               <a 
-                href="https://github.com" 
+                href="https://github.com/angelovega2021?tab=overview&from=2024-12-01&to=2024-12-31" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Visit my GitHub profile"
@@ -150,7 +152,7 @@ export const Hero = () => {
                 <span className="sr-only">GitHub</span>
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/angelovega/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Visit my LinkedIn profile"
@@ -167,11 +169,14 @@ export const Hero = () => {
                 role="listitem"
               >
                 <Suspense fallback={<div style={{ width: '1.5rem', height: '1.5rem' }} />}>
-                  <FaEnvelope aria-hidden="true" />
+                  <FaViber aria-hidden="true" />
                 </Suspense>
                 <span className="sr-only">Email</span>
               </a>
             </SocialLinks>
+          </div>
+          <div>
+            <img src={profile} width="500" height="400" alt="profile" />
           </div>
         </HeroContent>
       </div>
