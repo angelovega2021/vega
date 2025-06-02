@@ -228,7 +228,7 @@ const Contact = () => {
               aria-label="Social media links"
             >
               <SocialLink 
-                href="https://github.com"
+                href="https://github.com/angelovega2021?tab=overview&from=2024-12-01&to=2024-12-31"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -5 }}
@@ -239,7 +239,7 @@ const Contact = () => {
                 <span className="sr-only">GitHub</span>
               </SocialLink>
               <SocialLink 
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/angelovega/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -5 }}
