@@ -36,11 +36,11 @@ function App() {
         <Hero />
         
         {/* Wrap non-critical sections in Suspense */}
+        <Suspense fallback={<LoadingFallback>Loading tech stacks...</LoadingFallback>}>
+          <Skills />
+        </Suspense>
         <Suspense fallback={<LoadingFallback>Loading projects...</LoadingFallback>}>
           <Projects />
-        </Suspense>
-        <Suspense fallback={<LoadingFallback>Loading skills...</LoadingFallback>}>
-          <Skills />
         </Suspense>
         <Suspense fallback={<LoadingFallback>Loading contact...</LoadingFallback>}>
           <Contact />

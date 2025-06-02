@@ -89,6 +89,11 @@ const Description = styled.p`
   line-height: 1.7;
 `;
 
+const Picture = styled.p`
+  animation: ${fadeUpKeyframes} 0.5s ease-out 0.4s forwards;
+  opacity: 0;
+`;
+
 const SocialLinks = styled.div`
   animation: ${fadeUpKeyframes} 0.5s ease-out 0.6s forwards;
   opacity: 0;
@@ -175,9 +180,9 @@ export const Hero = () => {
               </a>
             </SocialLinks>
           </div>
-          <div>
-            <img src={profile} width="500" height="400" alt="profile" />
-          </div>
+          <Picture>
+            <img src={profile} width="300" height="300" alt="profile" />
+          </Picture>
         </HeroContent>
       </div>
     </HeroSection>
