@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { theme } from '../../styles/theme';
-import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaFileAlt, FaPhoneAlt } from 'react-icons/fa';
+import resume from '../../assets/resume-Vega.pdf'
 
 const ContactSection = styled.section`
   position: relative;
@@ -203,15 +204,23 @@ const Contact = () => {
               I'm always interested in hearing about new projects and opportunities.
               Whether you have a question or just want to say hi, feel free to reach out!
             </ContactText>
-            <ContactEmail 
-              href="mailto:your.email@example.com"
+            <ContactEmail
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              aria-label="Send me an email at your.email@example.com"
+              aria-label="Send me an email at vegavillamor@gmail.com"
             >
               <FaEnvelope aria-hidden="true" />
-              <span>your.email@example.com</span>
+              <span>vegavillamor@gmail.com</span>
+            </ContactEmail>
+            <ContactEmail 
+              variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="Contact me at (+63)9065249258"
+            >
+              <FaPhoneAlt aria-hidden="true" />
+              <span>(+63)9065249258</span>
             </ContactEmail>
             <SocialLinks 
               variants={itemVariants}
@@ -241,14 +250,14 @@ const Contact = () => {
                 <span className="sr-only">LinkedIn</span>
               </SocialLink>
               <SocialLink 
-                href="https://twitter.com"
+                href={resume}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -5 }}
                 role="listitem"
-                aria-label="Follow me on Twitter"
+                aria-label="Resume"
               >
-                <FaTwitter aria-hidden="true" />
+                <FaFileAlt aria-hidden="true" />
                 <span className="sr-only">Twitter</span>
               </SocialLink>
             </SocialLinks>
