@@ -189,12 +189,12 @@ export const Layout = ({ children }: LayoutProps) => {
               role="heading"
               aria-level={1}
             >
-              Portfolio
+              Work Experience
             </Logo>
             <NavLinks role="list">
               <a href="#hero" role="listitem" aria-label="About section">About</a>
+              <a href="#skills" role="listitem" aria-label="SkillsT section">Tech Stack</a>
               <a href="#projects" role="listitem" aria-label="Projects section">Projects</a>
-              <a href="#skills" role="listitem" aria-label="Skills section">Skills</a>
               <a href="#contact" role="listitem" aria-label="Contact section">Contact</a>
             </NavLinks>
           </div>
