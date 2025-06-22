@@ -3,9 +3,10 @@ import { theme } from '../../styles/theme';
 import { keyframes } from '@emotion/react';
 import { lazy, Suspense } from 'react';
 import profile from '../../assets/profile.png'
-const FaGithub = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaGithub })));
+import resume from '../../assets/resume-Vega.pdf'
+// const FaGithub = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaGithub })));
 const FaLinkedin = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaLinkedin })));
-const FaViber = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaViber })));
+const FaFileAlt = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaFileAlt })));
 
 const HeroSection = styled.section`
   min-height: calc(100vh - 4.5rem);
@@ -138,24 +139,13 @@ export const Hero = () => {
               I'm Melchor Angelo Vega
             </Title>
             <Subtitle role="heading" aria-level={3}>
-              ReactJS Typescript | Ruby on Rails
+              ReactJS | Typescript | Ruby on Rails
             </Subtitle>
             <Description role="paragraph">
-              Building web application using reactJS.
+              <p>Building web application using reactJS.</p>
+              <p>Basic understanding using Ruby on Rails as the backend.</p>
             </Description>
             <SocialLinks role="list" aria-label="Social media links">
-              <a 
-                href="https://github.com/angelovega2021?tab=overview&from=2024-12-01&to=2024-12-31" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="Visit my GitHub profile"
-                role="listitem"
-              >
-                <Suspense fallback={<div style={{ width: '1.5rem', height: '1.5rem' }} />}>
-                  <FaGithub aria-hidden="true" />
-                </Suspense>
-                <span className="sr-only">GitHub</span>
-              </a>
               <a 
                 href="https://www.linkedin.com/in/angelovega/" 
                 target="_blank" 
@@ -169,12 +159,12 @@ export const Hero = () => {
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a 
-                href="mailto:your.email@example.com"
+                href={resume}
                 aria-label="Send me an email"
                 role="listitem"
               >
                 <Suspense fallback={<div style={{ width: '1.5rem', height: '1.5rem' }} />}>
-                  <FaViber aria-hidden="true" />
+                  <FaFileAlt aria-hidden="true" />
                 </Suspense>
                 <span className="sr-only">Email</span>
               </a>

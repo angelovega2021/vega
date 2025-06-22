@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { theme } from '../../styles/theme';
-import { FaEnvelope, FaGithub, FaLinkedin, FaFileAlt, FaPhoneAlt } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaFileAlt, FaPhoneAlt } from 'react-icons/fa';
 import resume from '../../assets/resume-Vega.pdf'
 
 const ContactSection = styled.section`
@@ -227,7 +227,7 @@ const Contact = () => {
               role="list"
               aria-label="Social media links"
             >
-              <SocialLink 
+              {/* <SocialLink 
                 href="https://github.com/angelovega2021?tab=overview&from=2024-12-01&to=2024-12-31"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -237,7 +237,7 @@ const Contact = () => {
               >
                 <FaGithub aria-hidden="true" />
                 <span className="sr-only">GitHub</span>
-              </SocialLink>
+              </SocialLink> */}
               <SocialLink 
                 href="https://www.linkedin.com/in/angelovega/"
                 target="_blank"
@@ -258,7 +258,7 @@ const Contact = () => {
                 aria-label="Resume"
               >
                 <FaFileAlt aria-hidden="true" />
-                <span className="sr-only">Twitter</span>
+                <span className="sr-only">Resume</span>
               </SocialLink>
             </SocialLinks>
           </ContactContent>

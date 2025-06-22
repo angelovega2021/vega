@@ -3,19 +3,17 @@ import { motion } from 'framer-motion';
 import { theme } from '../../styles/theme';
 import { 
   FaReact, 
-  FaNodeJs, 
   FaDatabase, 
-  FaDocker,
   FaGitAlt,
-  FaAws
 } from 'react-icons/fa';
 import { 
   SiTypescript,
   SiJavascript,
-  SiPython,
-  SiMongodb,
   SiPostgresql,
-  SiRedux
+  SiJest,
+  SiRubyonrails,
+  SiHeroku,
+  SiSidekiq
 } from 'react-icons/si';
 
 const SkillsSection = styled.section`
@@ -159,26 +157,24 @@ const skillCategories = [
       { name: 'React', icon: <FaReact /> },
       { name: 'TypeScript', icon: <SiTypescript /> },
       { name: 'JavaScript', icon: <SiJavascript /> },
-      { name: 'Redux', icon: <SiRedux /> },
+      { name: 'Jest', icon: <SiJest /> },
     ],
   },
   {
     title: 'Backend',
-    icon: <FaNodeJs />,
+    icon: <SiRubyonrails />,
     skills: [
-      { name: 'Node.js', icon: <FaNodeJs /> },
-      { name: 'Python', icon: <SiPython /> },
-      { name: 'MongoDB', icon: <SiMongodb /> },
+      { name: 'Ruby on Rails', icon: <SiRubyonrails /> },
+      { name: 'Sidekiq', icon: <SiSidekiq /> },
       { name: 'PostgreSQL', icon: <SiPostgresql /> },
     ],
   },
   {
     title: 'DevOps',
-    icon: <FaDocker />,
+    icon: <FaGitAlt />,
     skills: [
-      { name: 'Docker', icon: <FaDocker /> },
+      { name: 'Heroku', icon: <SiHeroku /> },
       { name: 'Git', icon: <FaGitAlt /> },
-      { name: 'AWS', icon: <FaAws /> },
       { name: 'CI/CD', icon: <FaDatabase /> },
     ],
   },
@@ -216,7 +212,7 @@ const Skills = () => {
         role="heading"
         aria-level={2}
       >
-        Skills & Expertise
+        Tech Stack
       </SectionTitle>
       <motion.div
         variants={containerVariants}

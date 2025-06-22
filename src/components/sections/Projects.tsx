@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { theme } from '../../styles/theme';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectsSection = styled.section`
   min-height: 100vh;
@@ -194,6 +194,15 @@ const projects = [
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
   },
+   {
+    id: 3,
+    title: "Project Two",
+    description: "Mobile-first e-commerce platform with seamless payment integration.",
+    image: "https://via.placeholder.com/400x200",
+    techStack: ["Next.js", "TypeScript", "Stripe", "Tailwind"],
+    githubUrl: "https://github.com",
+    liveUrl: "https://example.com",
+  },
 ];
 
 const Projects = () => {
@@ -259,15 +268,6 @@ const Projects = () => {
                   ))}
                 </TechStack>
                 <ProjectLinks>
-                  <a 
-                    href={project.githubUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label={`View ${project.title} source code on GitHub`}
-                  >
-                    <FaGithub aria-hidden="true" />
-                    <span className="sr-only">GitHub repository</span>
-                  </a>
                   <a 
                     href={project.liveUrl} 
                     target="_blank" 
