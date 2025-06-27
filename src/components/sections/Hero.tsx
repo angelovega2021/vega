@@ -143,7 +143,7 @@ export const Hero = () => {
             </Subtitle>
             <Description role="paragraph">
               <p>Building web application using reactJS.</p>
-              <p>Basic understanding using Ruby on Rails as the backend.</p>
+              <p>Basic proficiency in backend development with Ruby on Rails.</p>
             </Description>
             <SocialLinks role="list" aria-label="Social media links">
               <a 
